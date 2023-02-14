@@ -96,3 +96,13 @@ export function useEditProduct(product?: Product) {
     ...mutation,
   };
 }
+
+export function useDeleteProduct() {
+  const queryClient = useQueryClient();
+  return useMutation(
+    (id: number) => axios.delete(`http://localhost:3000/products/${id}`),
+    {
+      onSuccess: () => queryClient.invalidateQueries(["products"]),
+    }
+  );
+}

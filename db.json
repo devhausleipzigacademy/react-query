@@ -17,37 +17,6 @@
       "name": "MacBook",
       "price": 1500,
       "image": "https://www.backmarket.de/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D260/https://d1eh9yux7w8iql.cloudfront.net/product_images/439768_b3516422-a4cc-42c6-bcca-9998e4a1f725.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Surface Book",
-      "price": 1200,
-      "image": "https://www.backmarket.de/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D260/https://d1eh9yux7w8iql.cloudfront.net/product_images/439768_b3516422-a4cc-42c6-bcca-9998e4a1f725.jpg"
-    },
-    {
-      "name": "Test Product",
-      "price": 25,
-      "id": 5
-    },
-    {
-      "name": "lkajsdklas",
-      "price": 123,
-      "id": 6
-    },
-    {
-      "name": "product 2",
-      "price": 23450,
-      "id": 7
-    },
-    {
-      "name": "test 31",
-      "price": 123123,
-      "id": 8
-    },
-    {
-      "name": "test 4",
-      "price": 1234,
-      "id": 9
     }
   ]
 }

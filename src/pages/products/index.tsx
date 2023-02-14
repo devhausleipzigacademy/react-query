@@ -1,10 +1,15 @@
-import { useAddProduct, useProducts } from "@/hooks/useProducts";
+import {
+  useAddProduct,
+  useDeleteProduct,
+  useProducts,
+} from "@/hooks/useProducts";
 import Link from "next/link";
 import { SetStateAction } from "react";
 
 export default function Products() {
   const { error, isError, isLoading, products } = useProducts();
   const { form, setForm, mutate } = useAddProduct();
+  const { mutate: deleteProduct } = useDeleteProduct();
 
   if (isError) return <p className="text-red-500">{JSON.stringify(error)}</p>;
 
@@ -12,13 +17,20 @@ export default function Products() {
 
   return (
     <div className="flex flex-col gap-8 p-8">
-      <div>
-        <h1>Products</h1>
+      <div className="flex flex-col gap-4">
         {products &&
           products.map((product) => (
-            <Link href={`/products/${product.id}`} key={product.id}>
-              <p>{product.name}</p>
-            </Link>
+            <div className="flex items-center gap-4" key={product.id}>
+              <Link href={`/products/${product.id}`}>
+                <p>{product.name}</p>
+              </Link>
+              <button
+                onClick={() => deleteProduct(product.id)}
+                className="text-red-500 font-bold"
+              >
+                x
+              </button>
+            </div>
           ))}
       </div>
       <form
